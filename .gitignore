@@ -1,0 +1,31 @@
+# Virtual environment
+myenv/
+
+# Configutations
+config/
+*.cfg
+
+# Environment variables
+.env
+
+# Logs
+logs/
+
+# Plugins
+plugins/
+
+# Cache
+.cache
+__pycache__/
+
+# DS_Store
+.DS_Store
+
+# CSVs
+csvs/
+
+# Databases
+*.db
+
+# Ignore streaming history
+streaming_history/

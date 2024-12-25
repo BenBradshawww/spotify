@@ -1,0 +1,5 @@
+requests
+flask
+spotipy
+python-dotenv
+graphviz
