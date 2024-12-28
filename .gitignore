@@ -27,5 +27,5 @@ csvs/
 # Databases
 *.db
 
-# Ignore streaming history
-streaming_history/
+# Personal data
+data/

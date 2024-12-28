@@ -8,8 +8,6 @@ from general import run_query
 def push_songs_to_postgres(**kwargs):
 
     values = kwargs['ti'].xcom_pull(task_ids='get_last_songs', key='last_songs')
-
-    print(values)
     
     query = """
         INSERT INTO spotify_last_songs (

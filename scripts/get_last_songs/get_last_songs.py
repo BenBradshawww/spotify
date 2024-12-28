@@ -2,7 +2,6 @@ from path_config import *
 from logging_config import get_logger
 import requests
 import csv
-
 import spotipy
 
 logger = get_logger(__name__)
@@ -18,8 +17,6 @@ def get_last_songs(**kwargs):
     except Exception as e:
         logger.error("An error occurred:", e)
         raise
-    
-    kwargs['ti'].xcom_push(key='results', value=results)
     
     last_songs = []
 
