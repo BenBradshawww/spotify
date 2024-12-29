@@ -29,3 +29,6 @@ csvs/
 
 # Personal data
 data/
+
+# dbt configs
+.dbt/

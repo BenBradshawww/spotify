@@ -61,6 +61,18 @@ services:
       - "5050:80"
     volumes:
       - pgadmin-volume:/var/lib/pgadmin
+  
+  dbt:
+    container_name: dbt
+    build:
+      context: .
+      dockerfile: Dockerfile.dbt
+    volumes:
+      - ./dbt/:/opt/dbt
+      - ./.dbt:/opt/.dbt
+    depends_on:
+      postgres:
+        condition: service_healthy
 
   airflow-webserver:
     <<: *airflow-common
