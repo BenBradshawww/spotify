@@ -69,7 +69,7 @@ services:
       dockerfile: Dockerfile.dbt
     volumes:
       - ./dbt/:/opt/dbt
-      - ./.dbt:/opt/.dbt
+      - ./.dbt:/root/.dbt
     depends_on:
       postgres:
         condition: service_healthy

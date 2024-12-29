@@ -19,4 +19,4 @@ WORKDIR /opt/dbt
 
 # Install dbt dependencies (as specified in packages.yml file)
 # Build seeds, models and snapshots (and run tests wherever applicable)
-CMD dbt deps && dbt debug --profiles-dir /opt/.dbt/ && tail -f /dev/null
+CMD dbt deps && dbt debug && tail -f /dev/null

@@ -1,0 +1,52 @@
+version: 2
+
+sources:
+  - name: spotify
+    schema: public
+    tables:
+      - name: spotify_last_songs
+        columns:
+          - name: spotify_last_songs_id
+            description: "Unique identifier for the last song."
+            tests:
+              - unique
+              - not_null
+          - name: spotify_last_songs_updated_at
+            description: "Timestamp of the last update for the song."
+            tests:
+              - not_null
+          - name: spotify_last_songs_track_played_at
+            description: "Timestamp when the track was played."
+            tests:
+              - not_null
+          - name: spotify_last_songs_track_id
+            description: "Identifier for the track that was played."
+            tests:
+              - not_null
+      - name: spotify_old_songs
+        columns:
+          - name: spotify_old_songs_id
+            description: "Unique identifier for the old song."
+            tests:
+              - unique
+              - not_null
+          - name: spotify_old_songs_updated_at
+            description: "Timestamp of the last update for the old song."
+            tests:
+              - not_null
+          - name: spotify_old_songs_stopped_playing_at
+            description: "Timestamp when the song stopped playing."
+            tests:
+              - not_null
+          - name: spotify_old_songs_artist_name
+            description: "Name of the artist of the old song."
+            tests:
+              - not_null
+          - name: spotify_old_songs_track_name
+            description: "Name of the track."
+            tests:
+              - not_null
+          - name: spotify_old_songs_ms_player
+            description: "Milliseconds the song was played."
+            tests:
+              - not_null
