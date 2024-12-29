@@ -12,7 +12,9 @@ def push_songs_to_postgres(**kwargs):
     query = """
         INSERT INTO spotify_last_songs (
             spotify_last_songs_track_played_at,
-            spotify_last_songs_track_id
+            spotify_last_songs_track_id,
+            spotify_last_songs_artist_name,
+            spotify_last_songs_track_name
         ) VALUES %s
         ON CONFLICT (spotify_last_songs_track_id, spotify_last_songs_track_played_at)
         DO UPDATE

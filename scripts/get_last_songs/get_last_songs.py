@@ -25,8 +25,10 @@ def get_last_songs(**kwargs):
 
             track_played_at = item['played_at']
             spotify_track_id = item["track"]['id']
+            spotify_artist_name = item["track"]["artists"][0]['name']
+            spotify_track_name = item["track"]['name']
 
-            last_songs.append((track_played_at, spotify_track_id))
+            last_songs.append((track_played_at, spotify_track_id, spotify_artist_name, spotify_track_name))
 
     else:
         logger.info("No recently played tracks found.")

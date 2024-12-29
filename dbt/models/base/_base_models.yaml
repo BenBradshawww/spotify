@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: base_spotify_last_songs
+  - name: base_spotify__last_songs
     description: "Base model for data from spotify_last_songs."
     columns:
       - name: spotify_last_songs_id
@@ -17,12 +17,20 @@ models:
         description: "Timestamp when the track was played."
         tests:
           - not_null
+      - name: spotify_last_songs_artist_name
+        description: "Name of the artist of the last song."
+        tests:
+          - not_null
+      - name: spotify_last_songs_track_name
+        description: "Name of the track."
+        tests:
+          - not_null
       - name: spotify_last_songs_track_id
         description: "Identifier for the track that was played."
         tests:
           - not_null
-
-  - name: base_spotify_old_songs
+  
+  - name: base_spotify__old_songs
     description: "Base model for data from spotify_old_songs."
     columns:
       - name: spotify_old_songs_id

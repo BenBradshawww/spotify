@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_spotify__all_songs
+    description: "Base model for data from spotify_last_songs."
+    columns:
+      - name: spotify_track_id
+        description: "Unique identifier for the last song."
+      - name: spotify_track_played_at
+        description: "Timestamp when the track was played."
+        tests:
+          - not_null
+      - name: spotify_artist_name
+        description: "Name of the artist of the last song."
+      - name: spotify_track_name
+        description: "Name of the track."

@@ -19,6 +19,8 @@ def create_table(**kwargs):
             spotify_last_songs_updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
             spotify_last_songs_track_played_at TIMESTAMP NOT NULL,
             spotify_last_songs_track_id VARCHAR(255) NOT NULL,
+            spotify_last_songs_artist_name VARCHAR(255) NOT NULL,
+            spotify_last_songs_track_name VARCHAR(255) NOT NULL,
             UNIQUE (spotify_last_songs_track_id, spotify_last_songs_track_played_at)
         );
     """
