@@ -73,6 +73,25 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+  
+  lightdash:
+    container_name: lightdash
+    platform: linux/amd64
+    image: lightdash/lightdash:latest
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    volumes:
+      - ./.dbt:/root/.dbt
+      - ./dbt:/usr/app/dbt
+     # - ./entrypoint.sh:/usr/app/entrypoint.sh
+     # - ./lightdash-config:/root/.lightdash
+     # - lightdash-data:/app/data
+     # - lightdash-logs:/app/logs
+    ports:
+      - ${PORT:-8080}:${PORT:-8080}
+    #command: ["/bin/bash", "/usr/app/entrypoint.sh"]
 
   airflow-webserver:
     <<: *airflow-common
@@ -82,7 +101,7 @@ services:
     env_file:
       - .env
     ports:
-      - "8080:8080"
+      - "8000:8000"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
@@ -139,4 +158,5 @@ services:
 volumes:
   postgres-db-volume: {}
   pgadmin-volume: {}
-
+  lightdash-data: {}
+  lightdash-logs: {}
