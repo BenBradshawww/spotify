@@ -9,26 +9,44 @@ models:
         tests:
           - unique
           - not_null
+        meta:
+          dimension:
+            type: string
       - name: spotify_last_songs_updated_at
         description: "Timestamp of the last update for the song."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: timestamp
       - name: spotify_last_songs_track_played_at
         description: "Timestamp when the track was played."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: timestamp
       - name: spotify_last_songs_artist_name
         description: "Name of the artist of the last song."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: string
       - name: spotify_last_songs_track_name
         description: "Name of the track."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: string
       - name: spotify_last_songs_track_id
         description: "Identifier for the track that was played."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: string
   
   - name: base_spotify__old_songs
     description: "Base model for data from spotify_old_songs."
@@ -38,23 +56,41 @@ models:
         tests:
           - unique
           - not_null
+        meta:
+          dimension:
+            type: string
       - name: spotify_old_songs_updated_at
         description: "Timestamp of the last update for the old song."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: timestamp
       - name: spotify_old_songs_stopped_playing_at
         description: "Timestamp when the song stopped playing."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: timestamp
       - name: spotify_old_songs_artist_name
         description: "Name of the artist of the old song."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: string
       - name: spotify_old_songs_track_name
         description: "Name of the track."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: string
       - name: spotify_old_songs_ms_player
         description: "Milliseconds the song was played."
         tests:
           - not_null
+        meta:
+          dimension:
+            type: number

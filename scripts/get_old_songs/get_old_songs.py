@@ -7,7 +7,7 @@ logger = get_logger(__name__)
 
 old_songs = []
 
-def get_songs(file_path):
+def process_songs(file_path):
 
     with open(file_path, "r") as f:
         data = f.read()
@@ -32,7 +32,7 @@ def get_old_songs(**kwargs):
 
     for file in json_files:
         file_path = os.path.join(path, file)
-        get_songs(file_path)
+        process_songs(file_path)
     
     kwargs['ti'].xcom_push(key='old_songs', value=old_songs)
     
