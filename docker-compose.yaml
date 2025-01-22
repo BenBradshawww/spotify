@@ -90,7 +90,7 @@ services:
      # - lightdash-data:/app/data
      # - lightdash-logs:/app/logs
     ports:
-      - ${PORT:-8080}:${PORT:-8080}
+      - ${PORT:-8081}:${PORT:-8081}
     #command: ["/bin/bash", "/usr/app/entrypoint.sh"]
 
   airflow-webserver:
@@ -101,7 +101,7 @@ services:
     env_file:
       - .env
     ports:
-      - "8000:8000"
+      - "8080:8080"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
