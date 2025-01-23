@@ -66,8 +66,8 @@ models:
         meta:
           dimension:
             type: timestamp
-      - name: spotify_old_songs_stopped_playing_at
-        description: "Timestamp when the song stopped playing."
+      - name: spotify_old_songs_started_playing_at
+        description: "Timestamp when the song started playing."
         tests:
           - not_null
         meta:
@@ -87,6 +87,13 @@ models:
         meta:
           dimension:
             type: string
+      - name: spotify_old_songs_album_name
+        description: "Name of the album."
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string
       - name: spotify_old_songs_ms_player
         description: "Milliseconds the song was played."
         tests:
@@ -94,3 +101,35 @@ models:
         meta:
           dimension:
             type: number
+      - name: spotify_old_songs_reason_start
+        description: "Reason why the song started playing."
+        meta:
+          dimension:
+            type: string
+      - name: spotify_old_songs_reason_end
+        description: "Reason why the song stopped playing."
+        meta:
+          dimension:
+            type: string
+      - name: spotify_old_songs_shuffle
+        description: "Whether shuffle was enabled."
+        meta:
+          dimension:
+            type: boolean
+      - name: spotify_old_songs_skipped
+        description: "Whether the song was skipped."
+        meta:
+          dimension:
+            type: boolean
+      - name: spotify_old_songs_offline
+        description: "Whether the song was played offline."
+        meta:
+          dimension:
+            type: boolean
+      - name: spotify_old_songs_track_id
+        description: "Identifier for the track that was played."
+        tests:
+          - not_null
+        meta:
+          dimension:
+            type: string

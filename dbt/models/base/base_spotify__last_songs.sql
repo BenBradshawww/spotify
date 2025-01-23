@@ -10,12 +10,12 @@ model AS (
         spotify_last_songs_updated_at,
         spotify_last_songs_track_played_at,
         CASE
-          WHEN spotify_last_songs_track_name = 'Unkown Track'
+          WHEN spotify_last_songs_track_name = 'Unknown Track'
             THEN NULL
           ELSE spotify_last_songs_track_name
         END,
         CASE
-          WHEN spotify_last_songs_artist_name = 'Unkown Artist'
+          WHEN spotify_last_songs_artist_name = 'Unknown Artist'
             THEN NULL
           ELSE spotify_last_songs_artist_name
         END,
