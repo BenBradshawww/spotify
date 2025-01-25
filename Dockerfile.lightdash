@@ -1,0 +1,13 @@
+# Use the official Lightdash image as the base
+FROM lightdash/lightdash:latest
+
+# Install the Lightdash CLI globally
+RUN npm install -g @lightdash/cli
+
+# Install curl for health check
+RUN apt-get update && apt-get install -y curl
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
