@@ -94,7 +94,7 @@ models:
         meta:
           dimension:
             type: string
-      - name: spotify_old_songs_ms_player
+      - name: spotify_old_songs_ms_played
         description: "Milliseconds the song was played."
         tests:
           - not_null

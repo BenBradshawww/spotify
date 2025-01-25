@@ -16,7 +16,7 @@ def push_songs_to_postgres(**kwargs):
             spotify_old_songs_artist_name,
             spotify_old_songs_track_name,
             spotify_old_songs_album_name,
-            spotify_old_songs_ms_player,
+            spotify_old_songs_ms_played,
             spotify_old_songs_reason_start,
             spotify_old_songs_reason_end,
             spotify_old_songs_shuffle,

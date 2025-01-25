@@ -28,7 +28,7 @@ def create_table(**kwargs):
             spotify_old_songs_artist_name VARCHAR(255) NOT NULL,
             spotify_old_songs_track_name VARCHAR(255) NOT NULL,
             spotify_old_songs_album_name VARCHAR(255) NOT NULL,
-            spotify_old_songs_ms_player INTEGER NOT NULL,
+            spotify_old_songs_ms_played INTEGER NOT NULL,
             spotify_old_songs_reason_start VARCHAR(255),
             spotify_old_songs_reason_end VARCHAR(255),
             spotify_old_songs_shuffle BOOLEAN,

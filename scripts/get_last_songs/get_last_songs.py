@@ -35,8 +35,3 @@ def get_last_songs(**kwargs):
     
 
     kwargs['ti'].xcom_push(key='last_songs', value=last_songs)
-
-    
-
-
-    
