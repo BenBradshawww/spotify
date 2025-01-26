@@ -26,7 +26,6 @@ def get_access_token(**kwargs):
     else:
         logger.warning(f"No cache file found at {os.environ.get('CACHE_PATH')}")
 
-
     token_info = sp_oauth.get_access_token()
     access_token = token_info['access_token']
 

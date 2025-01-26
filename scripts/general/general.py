@@ -27,7 +27,7 @@ def run_query(query, values=None):
             conn.commit()
 
         elif 'SELECT' in query:
-            execute_values(cursor, query)
+            cursor.execute(query)
             logger.info(f'Query run successfully')
             conn.commit()
 
