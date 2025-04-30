@@ -1,7 +1,5 @@
 from path_config import *
 from logging_config import get_logger
-import requests
-import csv
 import spotipy
 
 logger = get_logger(__name__)

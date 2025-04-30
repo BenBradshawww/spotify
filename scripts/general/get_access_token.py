@@ -1,14 +1,10 @@
 import os
-import urllib.parse
-
-import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-
 from logging_config import get_logger
+from dotenv import load_dotenv
 
 logger = get_logger(__name__)
 
-from dotenv import load_dotenv
 load_dotenv()
 
 def get_access_token(**kwargs):
